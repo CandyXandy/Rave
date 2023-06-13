@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "extends": [
+    "custom",
+    "plugin:vue/vue3-recommended"
+  ],
+  "overrides": [
+    {
+      "env": {
+        "browser": false,
+        "node": true
+      },
+      "files": [
+        "./vite.config.js"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true,
+            "optionalDependencies": false
+          }
+        ]
+      }
+    }
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "root": true,
+  "rules": {
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always"
+        }
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      "off"
+    ],
+    "vue/singleline-html-element-content-newline": [
+      "off"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "custom-alias": {
+        "alias": {
+          "~": "./src"
+        },
+        "extensions": [
+          ".js",
+          ".vue"
+        ],
+        "packages": [
+          "apps/*",
+          "packages/*"
+        ]
+      }
+    }
+  }
+}

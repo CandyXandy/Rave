@@ -1,0 +1,22 @@
+# npm
+node_modules/
+
+# environment
+.env.local
+.env.development.local
+
+# build
+dist/
+dist-ssr/
+
+# turbo
+.turbo/
+
+# draw.io
+*.bkp
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

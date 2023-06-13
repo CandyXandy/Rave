@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  repo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces/UAdelaide/rave:rw
+    command:
+      - sleep
+      - infinity
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: rave
+      POSTGRES_PASSWORD: r4ve
+    network_mode: service:repo
+
+volumes:
+  postgres-data:

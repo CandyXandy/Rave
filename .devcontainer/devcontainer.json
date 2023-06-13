@@ -1,0 +1,88 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bierner.markdown-footnotes",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "hediet.vscode-drawio",
+        "html-validate.vscode-html-validate",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "vivaxy.vscode-conventional-commits",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin"
+      ],
+      "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        },
+        "[vue]": {
+          "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        },
+        "cSpell.enabledLanguageIds": [
+          "asciidoc",
+          "git-commit",
+          "latex",
+          "markdown",
+          "plaintext",
+          "restructuredtext",
+          "text"
+        ],
+        "cSpell.language": "en-GB",
+        "conventionalCommits.autoCommit": false,
+        "conventionalCommits.gitmoji": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "eslint.format.enable": true,
+        "prettier.requireConfig": true,
+        "redhat.telemetry.enabled": false,
+        "terminal.integrated.detectLocale": "off",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "args": [
+              "--login"
+            ],
+            "path": "bash"
+          }
+        },
+        "workbench.editorAssociations": {
+          "*.png": "imagePreview.previewEditor",
+          "*.svg": "imagePreview.previewEditor"
+        }
+      }
+    }
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "node"
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "dockerDashComposeVersion": "v2",
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [
+    5432,
+    3000,
+    5173
+  ],
+  "name": "Rave",
+  "portsAttributes": {
+    "3000": {
+      "label": "API"
+    },
+    "5173": {
+      "label": "Client"
+    },
+    "5432": {
+      "label": "PostgreSQL"
+    }
+  },
+  "remoteUser": "node",
+  "service": "repo",
+  "workspaceFolder": "/workspaces/UAdelaide/rave"
+}

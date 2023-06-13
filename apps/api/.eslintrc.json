@@ -1,0 +1,48 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "custom"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "./scripts/**/*.js"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true,
+            "optionalDependencies": false
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "./src/index.js",
+        "./scripts/*.js",
+        "./scripts/**/index.js"
+      ],
+      "rules": {
+        "no-console": [
+          "off"
+        ]
+      }
+    }
+  ],
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "root": true,
+  "rules": {
+    "global-require": [
+      "off"
+    ],
+    "turbo/no-undeclared-env-vars": [
+      "off"
+    ]
+  }
+}

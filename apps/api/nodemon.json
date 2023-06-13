@@ -1,0 +1,8 @@
+{
+  "exec": "dotenv -e ../../.env -c -- node ./src/index.js",
+  "watch": [
+    "./src/",
+    "../../.env",
+    "../../.env.local"
+  ]
+}

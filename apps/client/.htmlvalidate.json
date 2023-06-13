@@ -1,0 +1,37 @@
+{
+  "elements": [
+    "html5"
+  ],
+  "extends": [
+    "html-validate:recommended",
+    "html-validate:document",
+    "html-validate-vue:recommended"
+  ],
+  "plugins": [
+    "html-validate-vue"
+  ],
+  "root": true,
+  "rules": {
+    "element-case": [
+      "error",
+      {
+        "style": [
+          "lowercase",
+          "pascalcase"
+        ]
+      }
+    ],
+    "element-name": [
+      "off"
+    ],
+    "missing-doctype": [
+      "off"
+    ],
+    "require-sri": [
+      "off"
+    ]
+  },
+  "transform": {
+    "^.*\\.vue$": "html-validate-vue"
+  }
+}

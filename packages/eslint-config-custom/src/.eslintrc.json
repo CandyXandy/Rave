@@ -1,0 +1,50 @@
+{
+  "env": {
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "turbo",
+    "plugin:prettier/recommended",
+    "plugin:jsdoc/recommended-typescript-flavor-error"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "jsdoc/tag-lines": [
+      "error",
+      "never",
+      {
+        "startLines": 1
+      }
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "ignoreOnInitialization": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": true,
+        "memberSyntaxSortOrder": [
+          "single",
+          "multiple",
+          "all",
+          "none"
+        ]
+      }
+    ]
+  }
+}
